@@ -48,6 +48,11 @@ copyBtn.addEventListener("click", ()=>{
     if(passwordBox != "" || passwordBox.length >=1){
 
         navigator.clipboard.writeText(passwordBox.value);
-        passwordBox.value = "Password Copied ✔"
+        if(passwordBox.value == "" || passwordBox.value === 0){
+            passwordBox.value = "Please generate password"
+        }else{
+            passwordBox.value = "Password Copied ✔"
+
+        }
     }
 })
